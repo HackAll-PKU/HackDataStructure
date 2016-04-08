@@ -119,8 +119,7 @@ public class MyList<E> implements ICollection<E> {
     /**
      * Returns the index-th Node.
      */
-    Node<E> node(int index) {
-        //TODO:check index
+    private Node<E> node(int index) {
         Node<E> it;
         if (index < size / 2) {
             it = First;
@@ -212,8 +211,8 @@ public class MyList<E> implements ICollection<E> {
      * Returns the index-th element.
      */
     @Override
-    public E at(int index) {
-        //TODO:check index.
+    public E get(int index) throws IndexOutOfBoundsException {
+        if (index < 0 || index >= size) throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         return node(index).Value;
     }
 

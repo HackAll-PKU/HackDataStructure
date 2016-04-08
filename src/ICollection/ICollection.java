@@ -30,7 +30,7 @@ public interface ICollection<E> {
 
     boolean isEmpty();
 
-    E at(int index);
+    E get(int index);
 
     int indexOf(Object o);
 
