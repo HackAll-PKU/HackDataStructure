@@ -31,6 +31,6 @@ public class MyDateTest {
 
     @Test
     public void testGetWeek() throws Exception {
-        Assert.assertEquals(2, date.getWeek());
+        Assert.assertEquals(2, date.getWeekday());
     }
 }
