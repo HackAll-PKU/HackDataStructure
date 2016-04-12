@@ -34,7 +34,7 @@ public class MyDate implements Comparable<MyDate> {
     }
 
     public long getWeek() {
-        return (unixDate + 4) % 7;
+        return (unixDate + 2) % 7;
     }
 
     @Override
