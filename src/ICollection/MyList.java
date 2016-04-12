@@ -144,7 +144,7 @@ public class MyList<E> implements ICollection<E> {
     public boolean add(E e) {
         if (e instanceof Comparable) {
             for (Node<E> x = First; x != null; x = x.Next) {
-                if (((Comparable) e).compareTo(x.Previous.Value) <= 0) {
+                if (((Comparable) e).compareTo(x.Value) <= 0) {
                     linkBefore(e, x);
                     return true;
                 }
