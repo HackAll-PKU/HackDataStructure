@@ -6,18 +6,18 @@ import java.util.Date;
  * Created by Sample on 2016/4/10.
  */
 public class MyDate implements Comparable<MyDate> {
-    public long unixDate;
+    private long unixDate;
 
     public MyDate() {
-        unixDate = System.currentTimeMillis() / 86400000l;
+        unixDate = System.currentTimeMillis() / 86400000L;
     }
 
     public MyDate(int y, int m, int d) {
-        unixDate = new Date(y, m, d).getTime() / 86400000l;
+        unixDate = new Date(y, m, d).getTime() / 86400000L;
     }
 
     public MyDate(int y, int m) {
-        unixDate = new Date(y, m, 1).getTime() / 86400000l;
+        unixDate = new Date(y, m, 1).getTime() / 86400000L;
     }
 
     public MyDate(long unixDate) {
@@ -37,6 +37,7 @@ public class MyDate implements Comparable<MyDate> {
         return (unixDate + 4) % 7;
     }
 
+    @Override
     public int compareTo(MyDate rVal) {
         if (unixDate == rVal.unixDate) return 0;
         if (unixDate < rVal.unixDate) return -1;
@@ -52,6 +53,7 @@ public class MyDate implements Comparable<MyDate> {
         return rVal.unixDate == this.unixDate;
     }
 
+    @Override
     public int hashCode() {
         return (int) unixDate;
     }
