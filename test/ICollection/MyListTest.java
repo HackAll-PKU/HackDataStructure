@@ -28,25 +28,25 @@ public class MyListTest {
         for (Integer i = 10; i > 0; i--) {
             list.add(i);
         }
-        Assert.assertEquals(list.contains(1), true);
+        Assert.assertEquals(true, list.contains(1));
     }
 
     @Test
     public void testRemoveAndContains() throws Exception {
         list.remove(5);
-        Assert.assertNotEquals(list.contains(5), true);
+        Assert.assertNotEquals(true, list.contains(5));
     }
 
     @Test
     public void testToArray() throws Exception {
         Object[] array = list.toArray();
-        Assert.assertArrayEquals(new Integer[] {1,2,3,4,5,6,7,8,9,10}, array);
+        Assert.assertArrayEquals(array, new Integer[] {1,2,3,4,5,6,7,8,9,10});
     }
 
     @Test
     public void testClearAndSize() throws Exception {
         list.clear();
-        Assert.assertEquals(list.size(), 0);
+        Assert.assertEquals(0, list.size());
     }
 
 }
